@@ -1,0 +1,12 @@
+<button
+  [type]="button.type"
+  [ngClass]="{
+    primary: button.style == 'primary',
+    secondary: button.style == 'secondary',
+    ghost: button.style == 'ghost'
+  }"
+  [disabled]="button.isDisabled"
+  [tabIndex]="button.tabIndex"
+>
+  {{ button.text }}
+</button>
