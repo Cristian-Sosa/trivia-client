@@ -3,9 +3,11 @@ import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../shared/ui/dummy';
 
 @Component({
-  selector: 'app-auth',
+  selector: 'app-explanation',
   imports: [ButtonComponent, RouterLink],
-  templateUrl: './auth.component.html',
-  styleUrl: './auth.component.sass',
+  templateUrl: './explanation.component.html',
+  styleUrl: './explanation.component.sass'
 })
-export class AuthComponent {}
+export class ExplanationComponent {
+
+}

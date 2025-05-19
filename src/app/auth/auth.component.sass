@@ -1,0 +1,42 @@
+.auth-section
+  width: min(90%, 650px)
+  height: 100%
+
+  margin: 0 auto
+
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 3fr 5fr 1.5fr
+  grid-column-gap: 0px
+  grid-row-gap: 0px
+  grid-template-areas: "header" "content" "footer"
+
+header
+  padding-top: 20px
+
+  color: #EEEEFF
+
+  grid-area: header
+
+  h2
+    font-size: 1.938rem
+  h1
+    font-size: 3.813rem
+  h3
+    font-size: 1.25rem
+
+figure
+  width: 100%
+
+  display: flex
+  justify-content: flex-end
+
+footer
+  width: 100%
+
+  grid-area: footer
+  justify-self: center
+  align-self: center
+
+  .app-button button
+    width: 100%

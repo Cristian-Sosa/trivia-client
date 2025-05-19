@@ -1,0 +1,75 @@
+.explanations-section
+  width: min(90%, 650px)
+  height: 100%
+
+  margin: 0 auto
+
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 3.5fr 5fr 1.5fr
+  grid-column-gap: 0px
+  grid-row-gap: 0px
+  grid-template-areas: "header" "content" "footer"
+
+header
+  padding-top: 20px
+
+  color: #EEEEFF
+
+  grid-area: header
+
+  h2
+    font-size: 1.8rem
+  h3
+    margin-top: 10px
+    font-size: 1.5rem
+
+  .niveles
+    font-size: 1rem
+    list-style: none
+
+    .item-nivel
+      width: 100%
+
+      padding-top: 8px
+
+      display: flex
+      justify-content: space-between
+
+      .nivel-description
+        font-size: .8rem
+        color: rgba(238, 238, 255, .8)
+
+
+
+figure
+  width: 100%
+
+  display: flex
+  justify-content: flex-end
+
+article
+  color: #EEEEFF
+
+  grid-area: content
+
+  h3
+    margin-top: 10px
+    font-size: 1.5rem
+
+  .premios
+    padding-top: 10px
+    font-size: 1rem
+
+    p:nth-child(2)
+      padding-top: 1rem
+
+footer
+  width: 100%
+
+  grid-area: footer
+  justify-self: center
+  align-self: center
+
+  .app-button button
+    width: 100%

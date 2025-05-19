@@ -1,0 +1,23 @@
+<section class="auth-section">
+  <header>
+    <figure>
+      <img src="assets/images/vidon-estático.svg" alt="logo de vidón bar" />
+    </figure>
+    <h2>JUEGO DE</h2>
+    <h1>TRIVIA</h1>
+    <h3>DE VIDÓN BAR</h3>
+  </header>
+  <footer>
+    <app-button
+      class="app-button"
+      [button]="{
+        type: 'button',
+        text: 'Quiero la trivia',
+        style: 'primary',
+        isDisabled: false,
+        tabIndex: 0
+      }"
+      [routerLink]="['/explanations']"
+    ></app-button>
+  </footer>
+</section>

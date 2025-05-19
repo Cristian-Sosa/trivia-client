@@ -1,0 +1,46 @@
+<section class="explanations-section">
+  <header>
+    <figure>
+      <img
+        src="assets/images/einstein - 8bits.svg"
+        alt="imagen de einstein 8bits"
+      />
+    </figure>
+    <h2>¿Cómo es?</h2>
+    <h3>Niveles</h3>
+    <ul class="niveles">
+      <li class="item-nivel">
+        Cerveza <span class="nivel-description">3 preg. 1 birra</span>
+      </li>
+      <li class="item-nivel">
+        Fernet <span class="nivel-description">5 preg. 2 ferné</span>
+      </li>
+      <li class="item-nivel">
+        Einstein <span class="nivel-description">7 preg. 3 Einstein</span>
+      </li>
+    </ul>
+  </header>
+  <article>
+    <h3>Premios</h3>
+    <div class="premios">
+      <p>
+        Mientras más difícil sea, mejor es el premio. Solo se puede jugar 1 vez
+        por día y por mesa.
+      </p>
+      <p>¡CUIDADO CON EL TIEMPO!</p>
+    </div>
+  </article>
+  <footer>
+    <app-button
+      class="app-button"
+      [button]="{
+        type: 'button',
+        text: 'Elegir dificultad',
+        style: 'primary',
+        isDisabled: false,
+        tabIndex: 0
+      }"
+      [routerLink]="['/explanations']"
+    ></app-button>
+  </footer>
+</section>
