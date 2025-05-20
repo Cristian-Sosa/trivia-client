@@ -1,0 +1,48 @@
+.input-container
+  margin-bottom: 1rem
+  font-size: 1.2rem
+
+  .input-label
+    display: block
+    margin-bottom: 0.5rem
+
+    .required-asterisk
+      color: #e63946
+
+  .input-wrapper
+    position: relative
+    display: flex
+    align-items: center
+
+    background-color: #070504
+
+    border: 1px solid #EEEEFF
+    border-radius: 4px
+
+    .input-icon
+      position: absolute
+
+  .form-input
+    width: 100%
+    padding: calc(1.2rem / 2) calc(1.2rem * 2 - (1.2rem / 2))
+
+    font-family: "Vast Shadow", serif
+    font-weight: 400
+    font-style: normal
+
+    font-size: 1.2rem
+    text-align: center
+    color: #EEEEFF
+
+    background-color: transparent
+    border: none
+
+    &:disabled
+      background-color: #f5f5f5
+
+  .helper-text, .error-message
+    font-size: 0.8rem
+    margin-top: 0.25rem
+
+  .error-message
+    color: #e63946

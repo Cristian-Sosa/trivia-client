@@ -29,12 +29,25 @@
       </p>
       <p>¡CUIDADO CON EL TIEMPO!</p>
     </div>
+
+    <form [formGroup]="explanationForm" (submit)="validatePhoneNumber($event)">
+      <app-input
+        [inputConfig]="{
+          type: 'number',
+          name: 'phone-numer-to-validate',
+          placeholder: 'Teléfono',
+          text: '',
+          isDisabled: false,
+        }"
+        formControlName="phoneNumberToValidate"
+      ></app-input>
+    </form>
   </article>
   <footer>
     <app-button
       class="app-button"
       [button]="{
-        type: 'button',
+        type: 'submit',
         text: 'Elegir dificultad',
         style: 'primary',
         isDisabled: false,
@@ -42,7 +55,7 @@
         ariaLabel: 'Go to validate phone number',
         tabIndex: 0,
       }"
-      [routerLink]="['/explanations']"
+      (click)="validatePhoneNumber()"
     ></app-button>
   </footer>
 </section>

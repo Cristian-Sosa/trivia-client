@@ -1,1 +1,34 @@
-<p>input works!</p>
+<div class="input-container" [class.disabled]="inputConfig.isDisabled">
+  <label *ngIf="inputConfig.label" [for]="inputConfig.name" class="input-label">
+    {{ inputConfig.label }}
+    <span *ngIf="inputConfig.isRequired" class="required-asterisk">*</span>
+  </label>
+
+  <div class="input-wrapper">
+    <input
+      [id]="inputConfig.name"
+      [name]="inputConfig.name"
+      [type]="inputConfig.type ?? 'text'"
+      [placeholder]="inputConfig.placeholder || ''"
+      [value]="currentValue || ''"
+      [disabled]="inputConfig.isDisabled"
+      [readonly]="inputConfig.isReadonly"
+      [required]="inputConfig.isRequired"
+      [attr.aria-label]="inputConfig.ariaLabel || inputConfig.label"
+      [tabIndex]="inputConfig.tabIndex || 0"
+      [formTarget]="inputConfig.formTarget ?? ''"
+      (change)="onInputChange($event)"
+      class="form-input"
+    />
+  </div>
+
+  <div
+    *ngIf="inputConfig.helperText && !inputConfig.errorMessage"
+    class="helper-text"
+  >
+    {{ inputConfig.helperText }}
+  </div>
+  <div *ngIf="inputConfig.errorMessage" class="error-message">
+    {{ inputConfig.errorMessage }}
+  </div>
+</div>
