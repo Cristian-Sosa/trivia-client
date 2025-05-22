@@ -1,0 +1,36 @@
+<div class="input-container" [class.disabled]="inputConfig.isDisabled">
+  <div class="input-wrapper">
+    <input
+      type="checkbox"
+      [id]="inputConfig.name"
+      [name]="inputConfig.name"
+      [placeholder]="inputConfig.placeholder || ''"
+      [value]="currentValue || ''"
+      [disabled]="inputConfig.isDisabled"
+      [required]="inputConfig.isRequired"
+      [attr.aria-label]="inputConfig.ariaLabel || inputConfig.label"
+      [tabIndex]="inputConfig.tabIndex || 0"
+      [formTarget]="inputConfig.formTarget ?? ''"
+      (change)="onInputChange($event)"
+      class="form-input"
+    />
+
+    <label
+      *ngIf="inputConfig.label"
+      [for]="inputConfig.name"
+      class="input-label"
+    >
+      {{ inputConfig.label }}
+      <span *ngIf="inputConfig.isRequired" class="required-asterisk">*</span>
+    </label>
+  </div>
+  <div
+    *ngIf="inputConfig.helperText && !inputConfig.errorMessage"
+    class="helper-text"
+  >
+    {{ inputConfig.helperText }}
+  </div>
+  <div *ngIf="inputConfig.errorMessage" class="error-message">
+    {{ inputConfig.errorMessage }}
+  </div>
+</div>

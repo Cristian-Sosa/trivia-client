@@ -1,7 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { ButtonComponent } from '../shared/ui/dummy';
-import { InputComponent } from '../shared';
 import {
   FormBuilder,
   FormGroup,
@@ -9,6 +6,8 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { ButtonComponent } from '../shared/ui/dummy';
+import { InputCheckboxComponent, InputComponent } from '../shared/ui/smart';
 
 @Component({
   selector: 'app-explanation',
@@ -17,7 +16,8 @@ import {
     InputComponent,
     FormsModule,
     ReactiveFormsModule,
-  ],
+    InputCheckboxComponent
+],
   templateUrl: './explanation.component.html',
   styleUrl: './explanation.component.sass',
 })
@@ -26,6 +26,7 @@ export class ExplanationComponent {
 
   public explanationForm: FormGroup = this.formBuilder.group({
     phoneNumberToValidate: ['', Validators.required],
+    termsAndConditions: [false, Validators.requiredTrue]
   });
 
   validatePhoneNumber = ($event?: Event) => {
@@ -33,6 +34,9 @@ export class ExplanationComponent {
       $event.preventDefault();
     }
 
-    console.log(this.explanationForm.get('phoneNumberToValidate')?.value)
+    console.log({
+      phoneNumber: this.explanationForm.get('phoneNumberToValidate')?.value,
+      check: this.explanationForm.get('termsAndConditions')?.value
+    })
   }
 }

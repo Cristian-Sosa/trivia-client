@@ -26,3 +26,21 @@ export interface IInput {
   helperText?: string;
   errorMessage?: string;
 }
+
+export interface IInputCheckbox {
+  name: string;
+
+  label?: string;
+  placeholder?: string;
+  text: string;
+
+  isDisabled: boolean;
+  isRequired?: boolean;
+
+  ariaLabel?: string;
+  tabIndex?: number;
+  formTarget?: string;
+
+  helperText?: string;
+  errorMessage?: string;
+}

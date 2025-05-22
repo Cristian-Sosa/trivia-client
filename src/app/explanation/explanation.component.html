@@ -34,13 +34,24 @@
       <app-input
         [inputConfig]="{
           type: 'number',
-          name: 'phone-numer-to-validate',
+          name: 'phone-number-to-validate',
           placeholder: 'Teléfono',
           text: '',
           isDisabled: false,
         }"
         formControlName="phoneNumberToValidate"
       ></app-input>
+
+      <app-input-checkbox
+        [inputConfig]="{
+          name: 'terms-and-conditions',
+          placeholder: '',
+          text: '',
+          label: 'Acepto que registren mi teléfono',
+          isDisabled: false,
+      }"
+      formControlName="termsAndConditions"
+      ></app-input-checkbox>
     </form>
   </article>
   <footer>
